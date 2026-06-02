@@ -4,6 +4,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Dashboard from './pages/Dashboard'
 import Analytics from './pages/Analytics'
+import Discover from './pages/Discover'
 
 function ProtectedRoute({ children }) {
   const { user, loading } = useAuth()
@@ -25,6 +26,7 @@ function AppRoutes() {
       <Route path="/" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
       <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to="/" replace />} />
+      <Route path="/discover" element={<ProtectedRoute><Discover /></ProtectedRoute>} />
     </Routes>
   )
 }

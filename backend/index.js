@@ -4,7 +4,7 @@ import dotenv from 'dotenv'
 import authRoutes from './src/routes/auth.js'
 import jobRoutes from './src/routes/jobs.js'
 import aiRoutes from './src/routes/ai.js'
-
+import discoverRoutes from './src/routes/discover.js'
 dotenv.config()
 
 const app = express()
@@ -20,6 +20,7 @@ app.use(express.json())
 app.use('/api/auth', authRoutes)
 app.use('/api/jobs', jobRoutes)
 app.use('/api/ai', aiRoutes)
+app.use('/api/discover', discoverRoutes)
 
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }))
 

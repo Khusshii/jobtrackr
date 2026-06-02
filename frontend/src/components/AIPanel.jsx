@@ -43,7 +43,7 @@ export default function AIPanel({ job, onClose }) {
         <div className="flex-1 overflow-y-auto p-6">
           {!coverLetter && !loading && (
             <div className="text-center mt-12">
-              <div className="text-4xl mb-4">✨</div>
+              <div className="text-4xl mb-4"></div>
               <p className="text-slate-600 text-sm mb-1">Generate a tailored cover letter</p>
               <p className="text-slate-400 text-xs">
                 Tip: Add a job description to the job for better results.
