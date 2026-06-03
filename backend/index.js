@@ -11,7 +11,7 @@ const allowedOrigins = [
   'http://localhost:5173',
   process.env.FRONTEND_URL
 ].filter(Boolean)
-
+const app = express()
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {
